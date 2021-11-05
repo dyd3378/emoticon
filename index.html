@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>최용우 - attr tab</title>
+    <script src="./script/jquery-1.11.3.js"></script>
+    <script>
+    //이미지 속성 선택하여 탭 메뉴 제작하기
+    $(function(){
+        $(".btn1").on("click",function(){
+            $(".frame img").attr({"src":"./images/01_responsive.jpg","alt":"반응형목업"});
+        });
+        $(".btn2").on("click",function(){
+            $(".frame img").attr({"src":"./images/02_logo.jpg","alt":"카멜로고"});
+        });
+        $(".btn3").on("click",function(){
+            $(".frame img").attr({"src":"./images/03_em1.jpg","alt":"인삼톡1"});
+        });
+        $(".btn4").on("click",function(){
+            $(".frame img").attr({"src":"./images/03_em2.jpg","alt":"인삼톡2"});
+        });
+        $(".btn5").on("click",function(){
+            $(".frame img").attr({"src":"./images/03_em3.jpg","alt":"인삼톡3"});
+        });
+        
+
+
+    });
+    </script>
+    <style>
+        *{margin: 0; padding: 0;}
+        ul,li{margin: 0; padding: 0; list-style: none;}
+        body{background: #dedede;}
+
+        #pf {position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);}
+        #pf ul {display: flex; justify-content: space-between;}
+        #pf ul li a {background: #000; font-size: 14px; text-decoration: none; color: #fff; width: 135px; display: block; padding: 10px 0 10px 0; 
+                    border-top-left-radius: 10px; border-top-right-radius: 10px;
+                    text-align: center;
+                }
+        #pf ul li a:hover {background: #999;}
+        #pf ul li a:focus {background: rgb(121, 121, 121);}
+
+
+        #pf .frame img{border: 1px solid #000;}
+    </style>
+</head>
+<body>
+    <div id="pf">
+        <div class="menu">
+            <ul>
+                <li><a href="#" class="btn1">반응형목업</a></li>
+                <li><a href="#" class="btn2">카멜로고</a></li>
+                <li><a href="#" class="btn3">인삼톡1</a></li>
+                <li><a href="#" class="btn4">인삼톡2</a></li>
+                <li><a href="#" class="btn5">인삼톡3</a></li>
+            </ul>
+        </div>
+        <div class="frame">
+            <a href="#"><img src="./images/01_responsive.jpg" alt="카멜로고"></a>
+        </div>
+    </div>
+</body>
+</html>
